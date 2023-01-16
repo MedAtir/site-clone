@@ -7,6 +7,8 @@ body{
     padding-top: 70px;
     -webkit-font-smoothing: antialiased;
     margin: 0px;
+    overflow-x: hidden;
+ 
 }
 nav{
     width: 100%;
@@ -172,7 +174,7 @@ h1, h2, h3, h4 {
     margin: 0 -10px;
 }
 .cartes {
-    
+    margin-left: 20px;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
@@ -242,7 +244,7 @@ h1, h2, h3, h4 {
     background: transparent;
     border: 0;
     border-radius: 0;
-    padding: 0 2em 0 0;
+    padding: 0 1.5em 0 0;
     -webkit-appearance: none;
     outline: 0;
     text-transform: none;
@@ -263,6 +265,7 @@ h1, h2, h3, h4 {
     line-height: 1em;
     background: no-repeat url(down.svg) 50% 50%;
     background-size: 15px;
+    font-size: 10px;
     
 }
 #select3{
@@ -271,9 +274,79 @@ h1, h2, h3, h4 {
 .cartes img{
     margin-bottom: -0.4em;
 }
-.brands {
-    margin: 2.5rem auto 3.125rem;
-}
+
 .brands{
+    width:80%;
+    margin: 2.5rem auto 3.125rem;
+    display: flex;
+    justify-content: center;
+}
+.brands h1{
+    width: 20%;
+    justify-self: flex-start;
+    font-size: 26px;
+    font-family: 'Work Sans', sans-serif;
+    margin:0.83em 0;
+    padding-right: 3em;
+}
+.brands_logos{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2em;
+    align-items: center;
+    list-style: none;
+}
+.brands_logos a {
+    display: inline-block;
+    padding: 5px 0;
+    background-color: transparent;
+}
+a>svg {
+max-width: 100%;
+width: 7.4em;
+fill: #c4c4c4 ;
+}
+a>svg:hover{
+    fill: #00b39b;
+    }
+.gipo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.col1{
+    width: 3em;
+}
+.col2{
+    width: 4.5em;
+}
+
+
+
+.brands_logos .clinicloud img, .brands_logos .feegow img, .brands_logos .gipo img, .brands_logos .jameda img, .brands_logos .tuotempo img {
+    transition: all .2s ease 0s;
+    filter: invert(98%) sepia(2%) saturate(0) hue-rotate(180deg) brightness(300%) contrast(0);
+    -webkit-filter: invert(98%) sepia(2%) saturate(0) hue-rotate(180deg) brightness(300%) contrast(0);
+    opacity: .55;
+}
+
+.hoverimg:hover{
+    -webkit-filter: none !important; 
+  filter: none !important;
+  opacity: 1 !important;
     
+}
+.stats{
+    background-color: #d8f5f5 ;
+    display: flex;
+    justify-content: center;
+    padding: 4em 0;
+
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
 }
