@@ -342,6 +342,7 @@ a>svg:hover{
     display: flex;
     justify-content: center;
     padding: 4em 0;
+    position:relative
 
 }
 
@@ -349,4 +350,43 @@ a>svg:hover{
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
+}
+.col-2{
+    justify-items: stretch;
+}
+.stats__item{
+    width:100%;
+}
+.stats__header {
+    margin-top: 2em;
+}
+
+/* header{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-items: start;
+} */
+header>div>h1{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 34px;
+    line-height: 44.2px;
+    letter-spacing: -.3px;
+    text-align: left;
+    align-items: start;
+    
+    
+    
+}
+header>div>p{
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    padding-right: 7em;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+.header>div{
+    align-self: flex-start;
 }
