@@ -146,8 +146,8 @@ h1:hover{
 }
 h1, h2, h3, h4 {
     margin: 1em 0;
-    font-family: roboto;
-    font-weight: 200;
+    font-family: worksans;
+    font-weight: 100;
     letter-spacing: 1px;
 }
 .flex-lead{
@@ -164,4 +164,47 @@ h1, h2, h3, h4 {
 }
 .flex-lead>p:hover{
     text-decoration: underline;
+}
+.services{
+    margin: 3.75rem auto 2.5rem;
+}
+.service-grid{
+    margin: 0 -10px;
+}
+.cartes {
+    
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    gap: 20px;
+    font-family: roboto;
+    color:#ffffff;
+    min-height: 1px;
+    padding: 10px;
+}
+.cartes div{
+    
+    border-radius: 10px;
+    padding: 2em 2em 0;
+    overflow: hidden;
+    height: 345px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .2s ease 0s;
+}
+.carte1{
+    background-color: #00ccb1;
+}
+.carte2{
+    background-color: #7c2626;
+}
+.carte3{
+    background-color: #2dbd45;
+}
+.title-carte{
+        font-size: 1.625em;
+        font-weight: 400;
+        color: #fff;
+        margin: 0.3em 0;
+        z-index: 3;
 }
