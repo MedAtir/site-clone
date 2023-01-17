@@ -1,17 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto,sans-serif:400,500,700|Work+Sans:300,400,500,600,700&display=swap);
 body{
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif,Arial,sans-serif;
+    font-family: 'Roboto',Arial,sans-serif;
     color: #747474;
     padding-top: 70px;
     -webkit-font-smoothing: antialiased;
     margin: 0px;
     overflow-x: hidden;
- 
 }
+    
 nav{
-    width: 100%;
+    
     display: flex;
     background-color: #ffffff;
     justify-content: center;
@@ -24,7 +26,7 @@ nav{
 }
 
 .header{
-    width: 65%;
+    width: 1080px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -191,6 +193,10 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all .1s ease 0s;
+}
+.carte1:hover,.carte2:hover,.carte3:hover{
+    opacity: 0.9;
     transition: all .2s ease 0s;
 }
 /* .icon-carte{
@@ -341,8 +347,9 @@ a>svg:hover{
     background-color: #d8f5f5 ;
     display: flex;
     justify-content: center;
-    padding: 4em 0;
-    position:relative
+    padding: 1em 0 2em;
+    position:relative;
+    overflow: hidden;
 
 }
 
@@ -353,9 +360,11 @@ a>svg:hover{
 }
 .col-2{
     justify-items: stretch;
+    position: relative;
 }
 .stats__item{
     width:100%;
+    padding: 1.3em 0.5em ;
 }
 .stats__header {
     margin-top: 2em;
@@ -366,27 +375,258 @@ a>svg:hover{
     grid-template-rows: auto auto auto auto;
     justify-items: start;
 } */
-header>div>h1{
+.col-2>h1{
     font-family: 'Work Sans', sans-serif;
     font-size: 34px;
     line-height: 44.2px;
     letter-spacing: -.3px;
     text-align: left;
     align-items: start;
+    margin: 0%;
     
     
     
 }
-header>div>p{
+.col-2>p{
     font-family: 'Roboto',Arial,sans-serif;
     font-size: 14px;
     line-height: 24px;
     padding-right: 7em;
 }
-header{
+.col-1margin{
+    margin-left: 2em;
+}
+.logogrid{
+    position:absolute;
+    z-index: 1;
+    bottom: -8em;
+    right: 11em;
+    
+}
+.box{
+    background-color: #fff;
+    width: 14em;
+    display: flex;
+    margin: 0.6em;
+    padding: 0em;
+    border-radius: 0.3em;
+    text-align: center;
+}
+.box h3{
+    font-family: 'Work Sans',sans-serif ;
+    font-size: 24px ;
+    line-height: 31.2px ;
+    letter-spacing: -.3px;
+    color: #00c3a5;
+}
+.box p {
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 13px;
+    line-height: 16.9px;
+}
+.box1, .box3{
+    transform: translateY(23px); 
+}
+.box3{
+    margin-bottom: 20px;
+}
+.offices{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 3em;
+}
+.office_inner:hover{
+    box-shadow: 0em 1.5em 2em 0em rgba(155, 155, 155, 0.4);
+}
+.offices_header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+.offices_header>h1{
+    padding: 0 8em;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: -.3;
+    margin-bottom: 0.2em !important;
+
+}
+.offices_header>p{
+    padding: 0 18em;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    
+}
+.offices_slider{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+.office{
+    
+    padding: 15px;
+    
+}
+.office_inner{
+    border: 1px solid rgba(0,0,0,.03);
+    
+    border-radius: 0.3em ;
     display: flex;
     flex-direction: column;
 }
-.header>div{
-    align-self: flex-start;
+figure{
+    margin: 0em ;
 }
+figure img{
+    border-top-left-radius: 0.3em ;
+    border-top-right-radius: 0.3em ;
+}
+.office_desc {
+    justify-content: center;
+    padding: 1.1em;
+
+    color: #747474;
+}
+a{
+    text-decoration: none;
+    font-family: 'Roboto',Arial,sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+span{
+    float: right;
+    border-radius: 4px;
+    padding: 1em 1.5em;
+    background: #3d83df;
+    font-family: 'Roboto',Arial,sans-serif;
+    line-height: 1em;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .04em;
+    font-size: 0.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .1s ease 0s;
+}
+span:hover{
+    background-color: #3069b5;
+}
+.join-us{
+    display: flex;
+    justify-content: center;
+}
+.join-us_header h1{
+    font-family: 'Work Sans',sans-serif;
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: -.3px;
+    color: #333333;
+}
+.join-us_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-btn{
+    float: right;
+    border-radius: 4px;
+    padding: 1.2em 1.5em;
+    background: #3d83df;
+    font-family: 'Roboto',Arial,sans-serif;
+    line-height: 1em;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .04em;
+    font-size: 0.72em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .1s ease 0s;
+    width: 15em;
+    margin-bottom: 4em;
+}
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em ;
+    font-family: 'roboto',sans-serif;   
+    font-size: 12px;
+    line-height: 15px;
+    color:#ababab;
+}
+footer>div>p{
+   
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+p>a{
+    color: #3d83df;
+    text-decoration: none;
+}
+p>a:hover{
+    text-decoration: underline;
+}
+.copy{
+    text-align: center;
+}
+.join-btn:hover{
+    background-color: #3069b5;
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        width: 620px;
+    }
+    
+    .services{
+        align-items: center;
+    }
+    .services-grid{
+        display:flex ;
+        align-items: center;
+    }
+    .cartes {
+        margin: 1em  ;
+        display: grid;
+        grid-template-columns: auto;
+        place-content: ;
+        font-family: 'Roboto', sans-serif;
+        color:#ffffff;
+        min-height: 1px;
+        padding: 10px;
+    }
+    .carte1,.carte2,.carte3{
+        width: ;
+        border-radius: 10px;
+        padding: 2em 2em 0;
+        height: 20em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all .1s ease 0s;
+        align-items: center;
+    } 
+    
+}
+
+
+
+
+
+
