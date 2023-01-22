@@ -7,7 +7,6 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   color: #747474;
   padding-top: 70px;
-  -webkit-font-smoothing: antialiased;
   margin: 0px;
   overflow-x: hidden;
 }
@@ -173,23 +172,23 @@ h4 {
   margin: 3.75rem auto 2.5rem;
 }
 .service-grid {
-  width: 80%;
+  width: 100%;
   margin: 0 -10px;
 }
 .cartes {
   margin-left: 20px;
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr) );
+  gap: 1em;
   font-family: "Roboto", sans-serif;
   color: #ffffff;
   min-height: 1px;
   padding: 10px;
+  justify-content: space-between;
 }
 .carte1,
 .carte2,
 .carte3 {
-  width: 15.6em;
   border-radius: 10px;
   padding: 2em 2em 0;
   height: 20em;
@@ -468,7 +467,8 @@ a > svg:hover {
   margin-bottom: 3em;
 }
 .offices_header > h1 {
-  padding: 0 8em;
+  width: 40%;
+  padding: 0 1em;
   font-family: "Work Sans", sans-serif;
   font-size: 30px;
   line-height: 39px;
@@ -476,14 +476,15 @@ a > svg:hover {
   margin-bottom: 0.2em !important;
 }
 .offices_header > p {
-  padding: 0 18em;
+  width: 50%;
+  padding: 0 1em;
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
 .offices_slider {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
 }
 .office {
   padding: 15px;
@@ -501,6 +502,7 @@ figure {
 figure img {
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
+  width: 100% !important;
 }
 .office_desc {
   justify-content: center;
@@ -536,6 +538,7 @@ span:hover {
 .join-us {
   display: flex;
   justify-content: center;
+  margin: auto;
 }
 .join-us_header h1 {
   font-family: "Work Sans", sans-serif;
@@ -618,6 +621,9 @@ p > a:hover {
     overflow-x: hidden;
     width: 100%;
   }
+  .header{
+    flex-direction: row !important;
+  }
   nav {
     padding: 0 1em;
   }
@@ -647,7 +653,7 @@ p > a:hover {
   .carte2,
   .carte3 {
     padding: 2em 2em 0;
-    width: 90%;
+    width: 80%;
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.1s ease 0s;
@@ -663,13 +669,13 @@ p > a:hover {
     margin-top: 0em;
   }
   .offices_header > h1 {
-    padding: 10px;
+    padding: 10px !important;
     font-size: 34px;
     margin: 0;
   }
 
   .offices_header > p {
-    padding: 5px 0;
+    padding: 5px 0 !important;
     font-size: 16px;
   }
 
@@ -694,23 +700,30 @@ p > a:hover {
   .stats {
     margin-top: 1.875rem;
     margin-bottom: 1.875rem;
+    width: 108%;
   }
 
   .grid-1 {
     grid-template-columns: auto;
     width: 100%;
   }
+  .box{
+    width:13em !important;
+  }
   .logogrid {
     z-index: 0;
     width: 90em;
-    right: -12em;
-    bottom: -41em;
+    left: 10em !important;
+    bottom: -41em !important;
+    position: absolute;
   }
   .stats_header h1 {
     font-size: 1.875em;
   }
+  
   .grid-2 {
     margin: 0;
+    grid-template-columns: auto auto !important;
   }
   .stats_grid.col-2 {
     padding: 5px;
@@ -727,12 +740,70 @@ p > a:hover {
   .join-us_header h1 {
     text-align: center;
   }
+  
+  
 }
 @media (max-width: 700px) {
+
+  .stats {
+    margin-top: 1.875rem;
+    width: 108%;
+    margin-bottom: 1.875rem;
+  }
+  .col-1margin {
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.col-2 > p {
+  padding: 0;
+  width: 80% ;
+  text-align: center;
+}
+
+  .grid-1 {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+  .logogrid {
+    z-index: 0;
+    width: 90em;
+    right: -12em;
+    bottom: -41em;
+  }
+  .stats_header h1 {
+    font-size: 34px;
+  }
+  .grid-2 {
+    margin: 0;
+    grid-template-columns: auto;
+  }
+  .stats_grid.col-2 {
+    padding: 5px;
+    width: 50%;
+    float: left;
+  }
+  .stats_item h3 {
+    font-size: 1.125em;
+  }
+  .stats_item p {
+    margin: 0;
+    font-size: 13.9px;
+  }
+  .join-us_header h1 {
+    text-align: center;
+  }
+
+  
   .brands {
     width: 100%;
     flex-wrap: wrap;
     margin: 1.875rem 0;
+    padding: 0;
   }
   footer > div > p {
     flex-wrap: wrap;
@@ -753,9 +824,17 @@ p > a:hover {
     text-align: center;
     width: 100%;
   }
+  .offices_header>h1{
+    width: 100%;
+  }
+  .offices_header>p{
+    width: 100%;
+  }
+  
+  
 }
 
-@media (max-width: 870px) {
+@media (max-width: 850px) {
   .offices .office {
     width: 290px;
   }
@@ -766,10 +845,81 @@ p > a:hover {
     margin-bottom: 1em;
   }
   .offices_slider {
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
   }
   .office_desc {
     padding: 0.9em;
     font-size: 1.3em;
   }
+
+.col-1margin {
+  margin-left: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.col-2 > p {
+padding: 0;
+width: 70% ;
+text-align: center;
+}
+.grid-1 {
+  grid-template-columns: auto;
+  width: 100%;
+}
+.logogrid {
+  z-index: 0;
+  width: 90em;
+  left: -20em;
+  bottom: -50em;
+}
+.box {
+
+  width: 18em;
+  margin: 0;
+  padding: 0;
+}
+.grid-2 {
+  width: 50%;
+  display: grid;
+  gap: 13px;
+  grid-template-columns: auto auto;
+  margin: 0;
+  padding: 0;
+}
+}
+@media (max-width: 650px) {
+  .header{
+    flex-direction: column;
+  }
+  .menu{
+    margin-top: 1em ;
+    padding-bottom: .8em;
+    align-self:flex-end;
+  }
+  
+.header_logo {
+  align-self: baseline;
+  margin-left: .8em;
+}
+.lead {
+  margin: 3.5625rem auto 3rem;
+}
+.flex-lead{
+  flex-direction: column;
+}
+
+.flex-lead > p {
+  width: 100%;
+}
+.box{
+  width: 18em;
+
+}
+.offices_slider {
+  grid-template-columns: auto;
+}
 }
